@@ -1,0 +1,125 @@
+.header {
+  margin-block: 3.5rem;
+  padding-inline: 2rem;
+  // background-color: aquamarine;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid gray;
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  background-color: $color-footer;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-nav-menu a,
+.nav a {
+  font-size: 1.25rem;
+  position: relative;
+}
+.mobile-nav-menu a::before,
+.nav a::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: $color-primary;
+  position: absolute;
+  top: 2rem;
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-menu a:hover::before,
+.mobile-nav-menu a:focus-visible::before,
+.nav a:hover::before,
+.nav a:focus-visible::before {
+  width: 100%;
+}
+
+.icon-btn {
+  background-color: $color-primary;
+  color: $color-light;
+  border-radius: 4px;
+  padding: 5px;
+  border: 2px solid $color-primary;
+}
+
+.nav-toggle-btn {
+  display: none;
+}
+
+.special-btn {
+  display: block;
+}
+
+.mobile-nav-menu {
+  background-color: #021324;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 20px;
+  border-radius: 8px;
+  position: absolute;
+  right: 1;
+  top: 6rem;
+  max-width: 20rem;
+  height: 16rem;
+}
+
+.mobile-nav-menu .special-btn {
+  display: none;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 64em) {
+  .header .container {
+    justify-content: flex-end;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .logo-containe {
+    margin-inline-end: auto;
+  }
+  .nav {
+    display: none;
+  }
+
+  .header {
+    padding-inline: 2.5rem;
+  }
+  .nav-toggle-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .special-btn {
+    display: none;
+  }
+  .mobile-nav-menu .special-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .header {
+    background-color: palevioletred;
+    padding-inline: 0rem;
+    margin: 0;
+  }
+  .mobile-nav-menu {
+    padding: 1rem 2rem;
+  }
+}
