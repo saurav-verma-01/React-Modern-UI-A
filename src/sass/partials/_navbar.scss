@@ -1,5 +1,5 @@
 .header {
-  margin-block: 3.5rem;
+  margin-block: 3rem;
   padding-inline: 2rem;
   // background-color: aquamarine;
 }
@@ -13,6 +13,7 @@
   border-radius: 5px;
   background-color: $color-footer;
   position: relative;
+  color: $color-light;
 }
 
 .nav {
@@ -83,6 +84,9 @@
 }
 
 @media screen and (max-width: 64em) {
+  .header {
+    margin-block: 2rem;
+  }
   .header .container {
     justify-content: flex-end;
     gap: 2rem;
@@ -105,6 +109,10 @@
 }
 
 @media screen and (max-width: 48em) {
+  .header {
+    margin-block: 1rem;
+  }
+
   .special-btn {
     display: none;
   }
@@ -118,6 +126,11 @@
     background-color: palevioletred;
     padding-inline: 0rem;
     margin: 0;
+  }
+  .header .container {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid gray;
   }
   .mobile-nav-menu {
     padding: 1rem 2rem;
